@@ -1,0 +1,100 @@
+Networking
+
+A network is a wireless connection that is used to connect the computer systems.
+
+types-
+PAN-1m-it is used to connect computers and consumers electronics which enables to share resources and exchange information.
+LAN-1-100m
+MAN-10km
+WAN-100-1000km
+GAM-global area network-10000km
+
+VPN-It stands for virtual private network. It allows the creation of a secured tunnel between different networks using the internet (public network). By the vpn, a client can connect to the organization's network remotely. 
+Advantage - 
+1-It is used to connect offices in different geographical locations remotely.
+2-It is used to secure transaction and confidential data transfer between multiple offices.
+3-VPN encrypts the internet traffic.
+types-
+1-Access VPN-It is used to provide connections between mobile users and telecommuters. It is low costs solutions and provides a wide range connectivity.
+2-Site-to-site VPN-it is used to connection between office to office on other locations.
+3-Intranet VPN-
+4-Entranet VPN
+
+Nodes - any communicating device in a network is called a node. Node is the point of intersection in a network. It can send/receive data and information within a network.
+
+Links-A link or edge refers to the connectivity between two nodes in the network.
+
+Network Topology-It is a physical layout of the netwok, connecting the different nodes using the links.
+Types-
+Bus-it is used to connets the smaller number of devices. If the main cable gets damage then the whole cable will be damage.
+star-all the nodes are connected  to one single node known as the central node. Mainly used in offices and home.
+ring-it is used very rarely and its expensive and hard to install and manage.
+mesh-each node connected with one or many nodes.
+hybrid-it is combination of different topologies.
+
+IPv4 address-An ip address is a 32-bit dynamic adress of a node in the network. It have 4 octets. It is based on the number of hosts.
+A  0-127 use for large network
+B  128-191 use for medium
+C  192-223 local area netwk
+D  224-239 multicasting
+E  240-255 R&D
+
+OSI reference model-Open system interconnetion is a network based on OSI model. It has 7 layer.
+Application 
+presentation           software layer
+session 
+
+transport        heart of OSI
+
+network
+datalink        hardware layer
+physical
+
+(bit)physical layer-it transmit the data in Bit form over the communication channel. There are 3 types of transmission modes-simplex, Half duplex, fullduplex.
+
+(frame)Data link- It allows detecting damages packets using the CRC(cyclic redundancy check) error-detecting code.
+
+Network layer-it controls the operation of the subnet. It takes care of feedback messaging through ICMP messages.
+
+TCP/IP reference model-It have four layers-
+Link
+internet
+transport
+application
+
+HTTP and HTTPS protocol- 
+http is the hyper text transfer protocol which defins the set of rules and standards on how the information can be transmitted on the WWW. It helps the web browsers and web servers for communication. It is an application layer protocol built upon TCP. It uses port 80 by default.
+HTTPs-it is secure HTTP. It is an advance and secure version of HTTP. It enables secure transactions by encrypting the communication. It uses 443 port.
+
+SMTP protocol-it is a simple mail transfer protocol. It sets the rule for communication between servers. It helps the software to transmit emails over the internet. It uses 25 port.
+
+DNS-it is domain name system. It is considerd as devices directory of the internet. It translates the domain name to IP's ex-google.com to 839.34.3.43.23. it uses 53 port. 
+
+router is networking device used for connecting two or more networks. It transfer the information and data through packets. It operates at the network layer.
+
+TCP- it is transmission contol protocol. It is set of rules that decides how a computer connects to the internet and how to transmit the data over network.
+1-connection oriented protocol
+2-more reliable
+3-protocols like-HTTP, FTP, SMTP, HTTPs
+
+UDP-It is user datagram protocol. It based on datagrams. It is used for multicasting ans broadcasting. Its functionality is almost the same as TCP/IP protocol.
+1-connection less protocol
+2-less reliable
+3-faster transmisson
+4-protocol like- DNS, SNMP, RTP use at the transport layer.
+
+ICMP protoco-ICMP is the Internet Control Message Protocol. It is a network layer protocol used for error handling. It uses port 7 by default.
+
+ARP-it is address resolution protocol. it is network level protocol used to convert the logical address. It is also used the MAC address.
+
+FTP protocol-FTP is a File Transfer Protocol. It is an application layer protocol used to transfer files and data reliably and efficiently between hosts. It uses port 27 by default.
+
+MAC address is the Media Access Control address. Network Interface Card (NIC) used at the Data Link Layer.  NIC is a hardware component in the networking device using which a device can connect to the network.
+
+Subnet-It is a network inside a network. It is used for getting a higher routing efficiency and enhances the security of the network. It reduce the time.
+
+Firewall- It is network security system that is used to monitor the incomming and outgoing traffic. it act as a wall between the public network and private network. It is either hardware device or software program or both. it adds a layyer of security to the network.
+
+unicasting-massege is sent to a single node from the source.
+multicasting-message is sent to a subset of nodes from the source.
+Broadcasting- message is sent to all the nodes in a network from a source 
