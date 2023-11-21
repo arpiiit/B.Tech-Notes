@@ -1,0 +1,123 @@
+Reactjs is a declarative, efficient and flexible javascript library for building reusable UI components. It is an open-source, component based front-end library which is responsible for view layer of the application.
+It was initialy developed and maintained by Facebook. It was created by Jordan Walke, who was a software engineer at Facebook. Facebook developed ReactJS in 2011 in its newsfeed section.
+
+DOM is an object which is created by the browser each time a web page is loaded.
+
+1-JSX- jsx stands for javascript syntax extension. It is an HTML like syntax used by reactjs. JSX allow to write javascript code in HTML format in react component and most of the error can be find in the compilation time. HTML provides to write HTML/XML like structure in the same file where we write javascript code.
+advantage -
+1-it is faster than regular javascript
+2-it is type safe, and most of the errors can be found at compilation time.
+3- It make easier to create templates.
+4-It uses camelcase naming convention.
+5-JSX allows us to use comments that begin with /* and ends with */ and wrapping them in curly braces {}.
+
+
+2-Components-Reactjs is all about components and all of the react components have a render function. Reactjs application is made up of multiple components, and each component has own logic and controls as well as API. Components are reusable which help to maintain the code on large scale project.
+types-
+1-functional components - functional components are only contain a render method and don't have their own state. we can create a funtion that takes props as input and returns what should be rendered. 
+ex - function WelcomeMessage(props) {  
+  return <h1>Welcome to the , {props.name}</h1>;  
+}  
+
+2-class components -Class components are more complex than functional components. In this component we can pass data from one class to other class components.  We can create a class by defining a class that extend components and has a render function. This class component is also known as statefull component because they can hold or manage local state.
+ex-
+class MyComponent extends React.Component {  
+  render() {  
+    return (  
+      <div>This is main component.</div>  
+    );  
+  }  
+}  
+
+3-one way data binding-the benifits of one-way data binding give us better control throughout the application. This makes the application more flexible that helps to increase Efficiency.
+
+4-simplicity- Reactjs uses JSX file which makes the application simple and do code as well as understand.
+
+5-performance-Currently, ReactJS gaining quick popularity as the best JavaScript framework among web developers.
+
+Advantage-
+1-easy to learn and use
+2-creating dynamic web application becomes easier
+3-Reusable components
+4-Scope for testing the code
+
+State-The state is an updatable structure that is used to contain data or information  about the components. It can change over time. It is the heart of the react component which determines the behaviour of the components. it is also responsible  for making a component dynamic and interactive.
+It can be set by using the setState() method passing a new state object as the argument. It can only be accessed or modified inside the component or by the component directly.
+To set the state, it is required to call the super() method in the constructor. States are mutable so we can modify
+
+setState() ;- This method is used to update the state of the component. it only adds changes to the original state. It uses callback function.
+
+props-props are read only components. props stands for properties. Props is used for pass the data or information from one component to other components. It is an object which stores the attribute of tag and work similar to the HTML attributes. Props are immutable so we cannot modify inside the component. It can be access by the child component. Props make components reusable.
+
+React component life-cycle-there are four phases
+1-initial phase - it is a starting phase. In this phase, a component contains the default props and initial state. there are two methods-
+a-getDefaultPropes()
+b-getInitialState()
+
+2-mounting phase-In this phase , the instance of a component is created and inserted into the dom.
+a-componentWillMount
+b-componentDidMount
+c-render()
+
+3-updating phase-Here, we get new Props and change State. This phase also allows to handle user interaction and provide communication with the components.
+a-componentWillUpdate
+b-componentDidUpdate
+
+4-unmounting phase-It is called when a component instance is unmounted from the DOM.
+a-componentWillUnmount()- It performs any necessary cleanup related task such as invalidating timers, event listener, canceling network requests, or cleaning up DOM elements. If a component instance is unmounted, you cannot mount it again.
+
+React forms-forms are an integeral part of any modern web application. It allows the users to interact with the application as well as gather information form the users.
+
+Events- An event is an action that could be triggerd as a result of the user action or system generated event.For example, a mouse click, loading of a web page, pressing a key, window resizes
+
+React List-Lists are used to display data in a ordered format and mainly used to display menues on website.
+The map() function is used for traversing the lists.
+ex-
+var numbers = [1, 2, 3, 4, 5];   
+const multiplyNums = numbers.map((number)=>{   
+    return (number * 5);   
+});   
+console.log(multiplyNums);   
+
+Key-A key is a unique identifier. It is used to identify which items have changed, updated, or deleted from the lists.
+
+Cookies-Cookies are data, stored in small text files, on your computer.
+Cookies were invented to solve the problem "how to remember information about the user":
+
+React Refs:-Refs is used for references in React. It is similar to keys. It provides a way to access React DOM nodes. It is used when we want to change the value of a child component, without using of props. It can also use as callbacks.
+ex-
+class MyComponent extends React.Component {  
+  constructor(props) {  
+    super(props);  
+    this.callRef = React.createRef();  
+  }  
+  render() {  
+    return <div ref={this.callRef} />;  
+  }  
+} 
+
+React router-It is mainly used for developing single page web applications. React router is used to define multiple routes in the application. React router is a standard library system and used to create routing in the react application using react router package. React Router plays an important role to display multiple views in a single page application.
+components-BrowserRouter(used for handling the  dynamic URL), HashRouter(used for static request)
+
+React Map-A map is a data collection type where data is stored in the form of pairs. It contains a unique key.
+
+React Context-Context allows passing data through the component tree without passing props down manually at every level.
+
+Hooks-Hooks are the new feature introduced in the react 16.8 version. It allow you to use state and other react features without writing a class. Hooks are the functions which "Hook into" react state and lifecycle features from function components. It doesn't work inside class.
+
+hooks state- Hook state is the new way of declaring a state in react app. Hook uses usestate() functional component for setting and retriving state.
+
+The useParams() hook is a React Router hook that allows you to access the parameters of the current URL.
+
+Hooks effect- The hook allows us to perform side effect in the function components. It doesn't use components lifecycle method in class components.
+ex-side effects
+1-updating the DOM
+2-Fetching and consuming data from a server API.
+
+Flux-It is an application architecture that facebook uses internally for building the client-side web application with react. It is not a library or framework. It reduces the runtime error.
+flux application have 3 major roles -
+1-dispatcher
+2-stores
+3-views
+
+react redux - react uses redux for building the user interface. It is an open-source javascript library. It encourages good 'react' architecture.
