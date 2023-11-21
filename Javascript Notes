@@ -1,0 +1,209 @@
+Javascript is a lightweight object-oriented programming language which is scripting language.
+
+object-collection of relative data and relative functionality is c/d object. We store the data as (key value) pair. we can store different types of data ie-string, array
+let user={
+	name="Arpit",
+	age:26;
+	getData:function(){
+		return "i am arpit"
+	} 
+}   -->  user.name="arpit";
+user['pin code']='234765'
+user.city="new york"
+console.log(user.inner.name);
+let member= new Object();
+
+variable-it is simply a name storage where we store the data elements
+A js globle variable is declared outside the function or declared with window object. It can be access for many function.
+let-it can not be redeclared. It have block scope.
+var-It can be access anywhere.
+const-it is constant. it can not be redeclared. It have block scope.
+
+Data types-
+premitive data types-string, number, boolean, undefined, null
+non-premetive data types- object, array
+
+JavaScript operators are symbols that are used to perform operations on operands.
+
+function-A Javascript function is a block of code designed to perform a particular task. It is defined with the function keyword.
+ex-
+function myFunction(p1, p2) {
+  return p1 * p2;
+}
+
+Events-Javascript has events that provide a dynamic interface to a webpage. the events are connected to elements in the dom.
+
+date-
+const d = new Date();
+
+Date Get Methods
+Method	Description
+getFullYear()	Get year as a four digit number (yyyy)
+getMonth()    	Get month as a number (0-11)
+getDate()	Get day as a number (1-31)
+getDay()	Get weekday as a number (0-6)
+getHours()	Get hour (0-23)
+getMinutes()	Get minute (0-59)
+getSeconds()	Get second (0-59)
+getMilliseconds()	Get millisecond (0-999)
+getTime()	Get time (milliseconds since January 1, 1970)
+
+sets- a js set is a collection of unique value. Each value can only occur once in a set.
+
+Map-a map holds key-value pairs. it helps to traversing the list.
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+Hoisting-it is javascript default behaviour of moving declarations to the top.
+
+Arrow function-it allows us to write shorter function.
+hello = () => {
+  return "Hello World!";
+}
+
+JSON-it is stands for javascript object notation. it is a format for storing and transporting data. It is used to send the data from server to a web page.
+
+Callback-A callback is a function passed as an argument to another function. This technique alllows a function to call another function. A callback function can run after another function has finished.
+ex-
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+function myCalculator(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+myCalculator(5, 5, myDisplayer);
+
+Asynchronous -A function that runs at a time is called asynchronous Function.A function running in parallel with other functions. Tasks can run simultaneously. callbacks are most often used with asynchronous functions.
+ex-setTimeout()
+
+Promise-A promise is a promise that is either execute or reject. A promise is a javascript object that allows you to make asynchronous calls. .
+ex-
+let promise = new Promise(function(resolve, reject) 
+	{ 
+	// Do something and either resolve or reject 
+});
+A promise has three states: 
+1-pending: the promise is still in the works. 
+2-fulfilled: the promise resolves successfully and returns a value. 
+3-rejected: the promise fails with an error. to resolve the callback hell we use promises.
+
+callback hell is used to resolve the error of promise when the program will rejected.
+
+Async and await- it make promises easier to write. async makes function return a promise. Await makes a function wait for a promise. The await keyword can only be used inside an async function.
+ex-
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve, reject) {
+    resolve("I love You !!");
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+myDisplay();
+
+map-it is advance version of map.
+1-function map-using for array traversal
+2-class map-it is alternative of object(key-string)
+let obj={
+name:'Arpit',
+10:'kd dfjdf jndjf'
+}
+let data=new Map([
+	['name','Arpit'],         ----------->object
+	[10:'kd dfjdf jndjf']
+])
+console.log(obj)
+console.log(data.get(10))         ------->map
+data.forEach((v,k)=>{
+	console.log(x[1]);
+}
+
+Generator function in js- whose function that we can be call or resume. In this function we can stop the execution. function* --> by this we can denote generater function. yield-->specific output
+function* SimpleGenerater(){
+	console("function called")
+	yield 20;-->first time
+	yield 30;-->second time
+	
+}
+let sG=SimpleGenerater();
+console.log(sG.next().value);
+
+Prototype in Javascript - It is mechanism that is used to inherit the features of object from one to another object. it can be used in object, function , array, string etc.
+
+let users={
+getAge:function(){
+	let age=new Date().getFullYear()-this.birth;
+	return age
+}
+}
+
+let student={
+birth:2000,
+getAge: users.getAge
+getAge:function(){
+	let age=new Date().getFullYear()-this.birth;
+	return age
+}
+}
+student.__proto__=users;
+console.log(student.getAge())
+
+
+object copy-in this we copy the actual memory location
+let obj={
+	name:'peter';
+}
+let user=obj;
+user.name='bruce'
+console.warn(obj);   -------->output-bruce
+
+Deep copy -(we also copy the nested object)
+let obj={
+	name:'peter',
+	address:{
+		city:'Noida',
+		state:'up'
+	},
+	getData:function(){
+		return "all data is here"
+	}
+};
+let user=JSON.parese(JSON.stringify(obj));------>in this data and function will not work.
+let user=_.cloneDeep(obj);----->use lodash library to reduce the problem of JSON method.
+user.adress.city="Gurgaon"
+Console.warn(obj);
+Console.warn(user);
+
+
+ shallow copy-in this we copy the actual value(copy the main object)
+let obj={
+	name:'peter';
+}
+let user=Object.assign({},obj);
+or
+let user=Object.assign(...obj);------->destructuring
+user.name='bruce'
+console.warn(obj); 
+console.warn(user); 
+
+
+Event bubbling-an action that performs any operations or calls function. ie-onCLick, onHover, onFocus etc.
+bubbling-when we perform onclick event then first call inner div or button event.
+to stop the event-          event.stopPropagation()
+
+Nullish coalescing operator(??)- to check undefined or null.
+bigint- big integer
+let x=322222222222222222222n
+let y=333333333333444444555n
+console.log(x*y)
+
+
+set-set is collection of unique value.
+let data=new Set([1,2,3,'heel',{},true])
+
+array function at()-find the last element of an array.
+let data=[3,4,5,6,6,7]
+console.log(data.at(-1))
+
