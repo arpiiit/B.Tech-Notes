@@ -1,0 +1,106 @@
+******Data Structure******
+A data structure is a logical way that data is organiged within a program.
+
+Application of real-time application of a data structure:-
+Dicision making
+Image processing
+compiler design
+database design
+
+Types of data structure-
+1-Linear DS-A data structure that arranged data elements sequentially or linearly. Where each elements is connected to its previous and next elements.
+Ex-Arrays, Linkedlist, Stack, Queue
+2-Non-Linear DS-A data structure that not arrange data elements sequentially or linearly. Where each elements is connected to its previous and next elements.
+Ex-Tree Graph
+
+linked list-It is a linear data structure that is connented with nodes. A node in the linked list contains two parts. first is data part and second is address part. The last node of the lsit contains a pointer to the null. In a linkedlist every link contains a connection to another link.
+operations-insertion, deletion, display, search
+
+Stack-Stack is a linear type of data structure where each elements followes a particular order to store data ie-LIFO(Last in first out).
+Application-
+1-Reversing a string
+2-Postfix to infix Expression
+3-Redu and Undo operation
+4-DFS
+Operations-
+1-Push-By this operation we can add an item to the top of the stack. The overflow condition occurs if the stack is full.
+2-pop-By this operation we can delete an item to the top of the stack. The underflow condition occurs if the stack is empty.
+3-top-this returns the top item from the stack.
+4-isEmpty-This returns true if the stack is empty else false.
+5-size-This returns the size of the stack.
+
+Queue-Queue is a linear type of data structure where each elements followes a particular order to store data ie-FIFO(First in first out)
+Application-
+1-BFS
+2-Operating system-Disk sheduling, job shedulibg
+3-Call management
+Operations-
+1-enqueue: This adds an element to the rear end of the queue.  Overflow conditions occur if the queue is full.
+2-dequeue: This removes an element from the front end of the queue. Underflow conditions occur if the queue is empty.
+3-isEmpty: This returns true if the queue is empty or else false.
+4-rear: This returns the rear end element known as tail.(insertion)
+5-front: This returns the front-end element known as head .(deletion)
+6-size: This returns the size of the queue.
+types-
+1-simple queue
+2-circular queue
+3-priority queue-the element with the highest priority would come first in a priority queue. 
+4-Double ended queue
+
+Tree-It is non-linear data structure. A tree is defined as a hierarchical data structure in which the elements are linked together via edges such that there is only one path between any two node of the tree. The top most node is known as a root node.
+
+Binary tree- The binary tree means that the node can have maximum two children. At each level of i, the maximum number of nodes is 2^i.
+types-Full bT, complete BT, Perfect BT, Balanced BT
+
+Binary search tree-In a Binary search tree, the value of left node must be smaller than the parent node, and the value of right node must be greater than the parent node. 
+
+GRaph- A graph is a non-linear data structure consisting of vertices and edges. In graph one node or vertices connected with two nodes with edges. The graph denotes G(E,V);
+Graphs are used to solve many real-life problems. ie-networking plateform,implement maps.
+*types of edge-
+1-unidirectional
+2-bi-directional or undirectioal
+*reprentation of graph-
+1-Adjacency Matrix-it is a way of representing a graph as a matrix of boolean(0' and 1') {  adjMat[i][j]    }
+
+2-Adjacency List- an array of list is used to store edges between two vertices. The size of array is equal to the number of vertices.
+advantage-no extra space required and time optimization.
+graph[0].add(new Edge(s: 1, d: 2));
+3-edge lsit
+4-2D matrix 
+Traversal in graph-
+1-BFS-BFS is implement using queue. I can say level order traversal.
+if(vis[curr]==F )
+a-print(curr)
+b-vis[curr]=True
+c-curr node neighbours add in Queue
+
+2-DFS-dfs is implement using Stack
+
+Shortest path algo-
+1-Dijkstra Algo
+if(dist[u]+wt<dist[v]){
+	dist[v]=dist[u]+wt; 	
+}
+
+
+HashSet-it doesn't allow duplicate. It conatins unique value. it is important for its time complexity because it contains O(1){contstant} time complexity in insertion , search and deletion.
+
+Hashmap-hashmap is special type of data structure that stores the data in key, value pair. it contains constant time complexity. In map the key will be unique. ex-student and his rollno.
+HashMap<String, Integer> map=new HashMap<>();
+hashing - change the form of data.
+ex-store the password.
+
+for(map.Entry<String, Integer> e: map.entrySet()){
+	SYso(e.getKey())	
+}
+Set<String>  keys=map.keySet();
+for(Sting key: keys){
+	String.out.println(key+" "+map.get(key));
+}
+
+by array of linkedlist we can implement the hashmap.
+put(k,v)
+containsKey
+get
+
+Generics is a set of related methods or a set of similar types.2
