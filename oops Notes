@@ -1,0 +1,95 @@
+oops:
+
+simula is considered the first object-oriented programming language.
+
+object-Any entity that has state, identity and behaviour is known as object. It is an instance of a class. object contains space in memory and address. It is a real-world-entity.
+
+Class- It is logical entity. Class is collection of objects. A class is also defined as a blueprint from which you can create an individual object.
+It does'nt consume any space.
+
+Inheritance-When one object acquires all the properties and behaviours of any parent object is known as inheritance. It provide code reusebility. It is used to method overriding (achive run time polymorphism). It is perform by extends keyword.
+class Employee{  
+ float salary=40000;  
+}  
+class Programmer extends Employee{  
+ int bonus=10000;  
+ public static void main(String args[]){  
+   Programmer p=new Programmer();  
+   System.out.println("Programmer salary is:"+p.salary);  
+}  
+}  
+Types-
+1-single:When a class inherits another class, it is known as a single in...
+2-Multilevel-When there is a chain of inheritance, it is known as mult....
+3-Hierarchical-When two or more classes inherits a single class......
+*To reduce the complexity and simplify the language, multiple inheritance is not supported in java.
+
+Polymorphism-if one task perform in differents ways, it is known as polymorphism. In java we use method overloading and method overriding to achive polymorphism.
+
+Abstraction-Hiding  internal details and showing functionality is known as abstraction.  In java we use abstract class and interface to achive abstraction.
+
+Encapsulation-Wrapping code and data together into a single unit are known as encapsulation. Ex-java class
+
+Association-It represents the relationship between the objects.
+Aggregation is a way to achive assosiation.
+
+Mothod-it is a way to perform some task. It is a collection of instructions that performs a specific task. it provide code reusebility.
+
+Constructor- it is a block of codes similar to the method. It is a special type of method which is used to initialize the object. 
+Every time an object is created using the new() keyword, at least one constructor is called.
+1-Constructor name must be the same as its class name
+2-it doesn't have return type.
+types-
+1-default
+2-parameterized.
+
+Static keyword- It is used for memory management mainly. We can apply static keyword with variables, method, blocks and nested classes. It makes your program memory efficient.
+
+This keyword- This is a reference variable that refers to the current object. This can be used to refer current class instance variable, method, constuctor etc.
+
+Method overloading-If a class has multiple methods having same name but different in parameter, it is known as method overloading.
+class Adder{  
+static int add(int a,int b){return a+b;}  
+static int add(int a,int b,int c){return a+b+c;}  
+}  
+
+Method overriding-If subclass (child class) has the same method as declared in the parent class, it is known as method overriding in Java. It is used for run time polymorphism.
+*The method must have the same name and same parameter as in the parent class.
+class Vehicle{  
+  void run(){System.out.println("Vehicle is running");}  
+}  
+class Bike2 extends Vehicle{  
+  void run(){System.out.println("Bike is running safely");}  
+  public static void main(String args[]){  
+  Bike2 obj = new Bike2();//creating object  
+  obj.run();//calling method  
+  }  
+}  
+
+Super Keyword-The super keyword in java is a reference variable which is used to refer super class object.
+
+Final keyword-final keyword is used for make an variable, method and constructor as constant. we cannot change the value of final variable.
+class Bike9{  
+ final int speedlimit=90;//final variable  
+ void run(){  
+  speedlimit=400;  
+ }  
+ public static void main(String args[]){  
+ Bike9 obj=new  Bike9();  
+ obj.run();  
+ }  
+}
+
+Abstract Class-A class which is declared with the abstract keyword is known as an abstract class in Java
+
+Interface-An interface in Java is a blueprint of a class. It has static constants and abstract methods. The interface in java is a machanism to achive abstraction and multiple inheritance in java.
+
+Package-A java package is a group of similar types of classes, interfaces and sub-packages.
+
+Access Modifiers in java- 
+private:-The private access modifier is accessible only within the class., 
+default:-If we don't use any modifier, it is treated as default by default.
+protected:- The protected access modifier can be applied on the data member, method and constructor.
+public:-It is accessible everywhere.
+
+
